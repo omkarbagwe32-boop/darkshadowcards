@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShadowNet | Cyber Awareness</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;background:#08090d;color:#eee;
+  font-family:Arial,sans-serif
+}
+header{
+  padding:22px 7%;display:flex;justify-content:space-between;
+  align-items:center;background:#101117;
+  border-bottom:1px solid #292b36
+}
+.logo{font-size:23px;font-weight:bold;letter-spacing:2px}
+.logo span{color:#ff354d}
+.tag{color:#ff7886;font-size:11px}
+main{max-width:1050px;margin:auto;padding:35px 20px}
+.warning{
+  padding:14px;background:#261319;border:1px solid #79303e;
+  color:#ffadb6;border-radius:5px;font-size:13px;line-height:1.6
+}
+.hero{padding:40px 0}
+h1{font-size:clamp(36px,6vw,58px);margin:10px 0}
+h1 span{color:#ff354d}
+p{color:#a3a8b7;line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{
+  padding:24px;background:#12141b;
+  border:1px solid #292c37;border-radius:8px
+}
+.card h2{font-size:19px}
+.price{font-size:32px;font-weight:bold;margin:18px 0}
+.price small{font-size:12px;color:#9299aa}
+button{
+  background:#ff354d;color:white;border:0;border-radius:5px;
+  padding:13px 18px;font-weight:bold;cursor:pointer
+}
+button:hover{background:#d82038}
+.secondary{background:transparent;border:1px solid #484b58}
+#result{
+  display:none;margin-top:20px;padding:20px;
+  border:1px solid #65e6a5;background:#101c18;border-radius:6px
+}
+#result h3{color:#65e6a5}
+footer{
+  margin-top:40px;padding:25px;text-align:center;
+  border-top:1px solid #292b36;color:#858b9a;font-size:12px
+}
+@media(max-width:650px){.grid{grid-template-columns:1fr}header{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">SHADOW<span>NET</span></div>
+  <div class="tag">EDUCATIONAL DEMO</div>
+</header>
+
+<main>
+  <div class="warning">
+    ⚠ EDUCATIONAL SIMULATION — All listings are fictional.
+    No real stolen data, financial information, or transactions are involved.
+  </div>
+
+  <section class="hero">
+    <p style="color:#ff5266;letter-spacing:3px">
+      CYBERSECURITY AWARENESS
+    </p>
+    <h1>Explore the <span>Dark Web</span></h1>
+    <p>
+      An educational demonstration of underground data markets,
+      online fraud, and the importance of protecting personal information.
+    </p>
+  </section>
+
+  <h2>Available Demo Products</h2>
+  <div class="grid">
+    <article class="card">
+      <p>CASE STUDY 01</p>
+      <h2>Data Breach Awareness</h2>
+      <p>Learn how criminals misuse exposed personal information
+      and how organizations can protect customers.</p>
+      <div class="price">₹2,456 <small>demo price</small></div>
+      <button onclick="buy('Data Breach Awareness')">Buy Now</button>
+    </article>
+
+    <article class="card">
+      <p>CASE STUDY 02</p>
+      <h2>Financial Fraud Awareness</h2>
+      <p>Understand unauthorized deductions, payment fraud,
+      warning signs, and steps victims can take.</p>
+      <div class="price">₹2,456 <small>demo price</small></div>
+      <button onclick="buy('Financial Fraud Awareness')">Buy Now</button>
+    </article>
+  </div>
+
+  <section class="card" style="margin-top:22px">
+    <h2>Presentation Details</h2>
+    <p>Presented by: <strong style="color:white">
+      Aishwarya Ravindra Ragini Bagwe
+    </strong></p>
+    <p>Demo reference: <strong style="color:white">1813</strong></p>
+    <p>
+      Fraud awareness example: secretly deducting money from a
+      salaried person's account is unauthorized financial activity,
+      not a legitimate service.
+    </p>
+  </section>
+
+  <section id="result">
+    <h3>Demo Checkout</h3>
+    <p id="item"></p>
+    <p>Demo amount: ₹2,456</p>
+    <p>No payment was processed. No bank details were requested.</p>
+    <button class="secondary" onclick="closeDemo()">Close</button>
+  </section>
+</main>
+
+<footer>
+  SHADOWNET · CYBERCRIME AWARENESS PROJECT<br>
+  Fictional demonstration only · No real transactions
+</footer>
+
+<script>
+function buy(name){
+  document.getElementById('item').textContent =
+    'Selected educational case study: ' + name;
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').scrollIntoView({
+    behavior:'smooth',block:'center'
+  });
+}
+function closeDemo(){
+  document.getElementById('result').style.display='none';
+}
+</script>
+</body>
+</html>
